@@ -1,0 +1,89 @@
+/* Variables de color */
+:root {
+    --amarillo: #FFD700;
+    --negro: #1a1a1a;
+    --rojo: #e31b23;
+    --verde: #25d366;
+    --blanco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+header {
+    background: rgba(0,0,0,0.9);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+.logo span { color: var(--amarillo); }
+
+.btn-llamar {
+    background: var(--rojo);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1000'); /* Imagen genérica de auto */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 { font-size: 2.5rem; color: var(--amarillo); margin-bottom: 10px; }
+.slogan { font-style: italic; color: #ccc; margin-bottom: 30px; }
+
+.btn-whatsapp {
+    background: var(--verde);
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.card {
+    background: #2a2a2a;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid var(--amarillo);
+}
+
+.card i { font-size: 3rem; color: var(--amarillo); margin-bottom: 15px; }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #666; }
